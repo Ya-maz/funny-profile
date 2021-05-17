@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header >
+        <a href='#' class='logo'>Logo</a>
+        <ul>
+            <li> <a href='#' class="active">Home</a></li>
+            <li> <a href='#'>About</a></li>
+            <li> <a href='#'>Work</a></li>
+            <li> <a href='#'>Contact</a></li>
+        </ul>
+        <img src="images/icon_moon.png" id="icon">
+
+        <!-- switch checkbox
+        <label>
+            <input type="checkbox" name="checkbox" />
+            <span></span>
+            <i class="indicator"></i>
+        </label> -->
+    </header>
+    <section>
+        <img src="./images/clouds.png" id="clouds">
+        <img src="./images/sun.png" id="sun">
+        <img src="./images/moon.png" id="moon">
+        <img src="./images/heli.png" id="heli">
+        <h2 id="text">Almaz Yakhin</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="./images/main.png" id="main">
+        <img src="./images/engineer.png" id="engineer">
+    </section>
+
+    <div class="sec">
+        <h2>OneTwoThre...</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda temporibus libero illum reiciendis nam hic debitis ratione illo? In nemo reprehenderit eum 
+            dolorem at itaque provident necessitatibus 
+            voluptas laudantium corrupti. Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit. Ratione 
+            ducimus temporibus deserunt, maiores a laudantium 
+            vero aut fugit exercitationem. Consequuntur eos 
+            soluta, placeat tenetur porro laborum magni iusto 
+            facilis at. Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!</p>
+            Aut nulla magni minima incidunt!</p>
+            Aut nulla magni minima incidunt!</p>
+            <br></br>
+            <p>Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!</p>
+            <br></br>
+            <p>Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!Lorem ipsum, dolor sit amet consectetur 
+            adipisicing elit. Modi asperiores veniam molestias,
+            voluptatibus ad saepe aliquam illo vero nihil
+            incidunt itaque eveniet doloremque sint suscipit.
+            Aut nulla magni minima incidunt!</p>
+    </div>
+    <script>
+        let heli = document.getElementById('heli'),
+            clouds = document.getElementById('clouds'),
+            sun = document.getElementById('sun'),
+            moon = document.getElementById('moon'),
+            text = document.getElementById('text'),
+            btn = document.getElementById('btn'),
+            checkbox = document.querySelector("input[name=checkbox]"),
+            icon = document.getElementById('icon'),
+            section = document.getElementsByTagName('section')[0],
+            valueX = 7,
+            valueY = 1
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY
+            heli.style.left = (80 - value/10) + 'vw'
+            clouds.style.left = (-10 - value/15) + 'vw'
+            btn.style.top = (5 + value/10) + 'vh'
+        })
+        // checkbox.addEventListener('change', function() {
+        //     if (this.checked) {
+        //         console.log("Checkbox is checked..")
+        //     } else {
+        //         console.log("Checkbox is not checked..")
+        //     }
+        //     });
+
+        // moveItem = function (item) {
+        //     item.style.left -= 2 +'%'
+        //     item.style.top -= 1 + 'vh'
+        //     }
+        // function checkItem(item) {
+        //     if (item.style.left <= 0 && item.style.top<= 0) {
+        //         section.removeChild(item)
+        //         clearInterval(moveItem)
+        //         }
+        //     }
+        //     function go(item) {setInterval(function(item) {
+        //         item.style.left -= 2 +'%'
+        //         item.style.top -= 1 + 'vh'
+            
+        //         if (item.style.left <= 0 && item.style.top<= 0) {
+        //         section.removeChild(item)
+        //         clearInterval(moveItem)
+        //         }
+        //         }, 500)}
+
+            // Начальный значения солнце и луны
+        let pointX = 0.5*Math.cos(-0.5),
+            pointY = 0.5*Math.sin(0.5)
+        sun.style.left = pointX + 'vw'
+        sun.style.top = pointY + 'vh'
+        moon.style.left = (0.5*Math.cos(-0.5 + Math.PI)) + 'vw'
+        moon.style.top = (0.5*Math.sin(0.5 + Math.PI)) + 'vh'
+        icon.addEventListener ('click', function() {
+            document.body.classList.toggle("dark-theme")
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "./images/icon_sun.png"
+                let move = setInterval(function() {
+                    pointX -= 0.5*Math.cos(30)
+                    pointY += 0.5*Math.sin(-30)
+                    sun.style.left = 0.5*pointX +'vw'
+                    sun.style.top = 0.5*pointY + 'vh'
+                    moon.style.left = (0.5*pointX + Math.PI) + 'vw'
+                    moon.style.top = (0.5*pointY + Math.PI) + 'vh'
+                        if (valueX <= 0 && valueY >= 10) {
+                        clearInterval(move)
+                        sun.style.display = none
+                    }
+                    }, 30)
+
+            } else {
+                icon.src = "./images/icon_moon.png"
+                section.appendChild(sun)
+                
+            }
+        })
+    </script>
+</body>
+</html>

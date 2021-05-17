@@ -1,0 +1,244 @@
+* {
+    font-family: 'Goblin One', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+
+
+}
+body {
+     min-height: 100vh;
+     overflow-x:hidden ;
+    
+
+}
+:root {
+    --primary-color:  linear-gradient(180deg,
+                    rgba(2,0,36,1) 0%,
+                    rgba(9,9,121,1) 13%,
+                    rgba(0,212,255,1) 100%);
+}
+.dark-theme {
+    --primary-color: linear-gradient(180deg,
+                    rgba(0,0,0,0.9444152661064426) 0%, 
+                    rgba(19,2,69,1) 13%, 
+                    rgba(29,10,85,0.7707457983193278) 89%);
+    background-image: url("./images/stars.png");
+    
+                     
+
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+}
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+
+}
+header ul li a:hover ,
+header ul li a.active {
+    background: #fff;
+    color: #000;
+}
+/* icon sun/moon */
+#icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient( to top, rgba(53,120,12,1), transparent);
+    z-index: 100;
+}
+section img {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#sun {
+   mix-blend-mode: screen; 
+}
+#text {
+    position: absolute;
+    color: #fff;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+#btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color:black;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+#clouds {
+    top:0%;
+    left: -5vw;
+    width: 100%;
+    height: 45%;
+    object-fit: contain;
+}
+#sun {
+    width: 20%;
+    height: 20%;
+    top: 1;
+    left: 7;
+}
+#moon {
+    width: 20%;
+    height: 20%;
+    top: 1;
+    left: 7;
+}
+#heli {
+    width: 10%;
+    height: 10%;
+    top: 20%;
+    left: 80vw;
+    object-fit: contain;
+}
+#main {
+    width: 100%;
+    height: 100%;
+}
+#engineer {
+    width: 15%;
+    height: 25%;
+    top: 75%;
+    left: 10%;
+    z-index: 10;
+}
+.sec {
+    position: relative;
+    padding: 100px;
+    background: linear-gradient(180deg,
+     rgba(53,120,12,1) 0%,
+     rgba(55,210,19,1) 13%,
+     rgba(0,236,255,1) 100%);
+}
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec p {
+    line-height: 2em;
+}
+/* switch button */
+label {
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+}
+label input {
+    appearance: none;
+    display: none;
+}
+label span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 40px;
+    background: rgba(201, 196, 196, 0.918);
+    border-radius: 20px;
+    box-shadow: inset 0 2px 15px rgba(38, 38, 39, 1),
+                inset 0 2px 2px rgba(38, 38, 39, 1),
+                inset 0 -1px 1px rgba(38, 38, 39, 1);
+}
+label .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient( to bottom, rgb(253, 253, 253), rgba(151, 149, 149, 0.555));
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(43, 40, 40, 0.5),
+                inset 0 1px 1px rgba(150, 95, 95, 0.1);
+    transition: 0.5s;
+    transform: scale(0.9)
+}
+label input:checked ~ .indicator {
+    top: 20px;
+}
+label .indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate (-50%, -50%);
+    width: 2px;
+    height: 2px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 2px red,
+                0 0 5px red,
+                0 0 10px red,
+                0 0 15px red,
+                0 0 20px red,
+                0 0 25px red,
+                0 0 30px red,
+                0 0 40px red;
+}
+label input:checked ~ .indicator::before {
+    background:  rgb(8, 192, 39);
+    box-shadow: 0 0 2px  rgb(8, 192, 39),
+                0 0 5px  rgb(8, 192, 39),
+                0 0 10px rgb(8, 192, 39),
+                0 0 15px  rgb(8, 192, 39),
+                0 0 20px  rgb(8, 192, 39),
+                0 0 25px  rgb(8, 192, 39),
+                0 0 30px  rgb(8, 192, 39),
+                0 0 40px  rgb(8, 192, 39);
+}
